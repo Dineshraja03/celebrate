@@ -1,0 +1,19 @@
+{
+  "name": "marvel-snaps-launch",
+  "version": "1.0.0",
+  "description": "A simple and modern webpage to launch Marvel Snaps.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "keywords": [
+    "marvel",
+    "launch",
+    "webpage"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

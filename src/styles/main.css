@@ -1,0 +1,114 @@
+body {
+    background-color: #ffd70c;
+    font-family: poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 4em;
+    color: #000000;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-size: 2em;
+    color: #000000;
+    margin-bottom: 2rem;
+}
+
+#launchButton {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.5em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    animation: pulse 2s infinite;
+    position: relative;
+    overflow: hidden;
+    transition: opacity 0.5s ease;
+}
+
+#launchButton:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background-color: #1a1a1a;
+}
+
+#launchButton:active {
+    transform: scale(0.95);
+}
+
+.launched {
+    background-color: #ffffff !important;
+}
+
+.popper {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popper.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.website-preview {
+    max-width: 800px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    margin: 20px auto;
+}
+
+.success-message {
+    color: #000000;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.success-message a {
+    color: #ffd70c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0,0,0,0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(0,0,0,0); }
+    100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+}
+
+@keyframes confetti-fall {
+    0% { transform: translateY(-100vh) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+.confetti {
+    position: fixed;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    animation: confetti-fall 5s linear forwards;
+}
+
+.animation-container {
+    margin-top: 30px;
+    min-height: 200px;
+}
